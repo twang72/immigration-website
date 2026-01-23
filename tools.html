@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigration Tools - CanAQuest Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>CanAQuest Consulting</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tools.html" class="active">Immigration Tools</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Immigration Tools & Calculators</h1>
+            <p>Free tools to help you assess your immigration eligibility</p>
+        </div>
+    </section>
+
+    <section class="tools-section">
+        <div class="container">
+            <!-- CRS Calculator -->
+            <div class="tool-card">
+                <h2>🎯 Express Entry CRS Calculator</h2>
+                <p>Calculate your Comprehensive Ranking System (CRS) score for Express Entry</p>
+                
+                <div class="calculator">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" min="18" max="100" placeholder="Enter your age">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">Level of Education:</label>
+                        <select id="education">
+                            <option value="0">Select education level</option>
+                            <option value="120">Doctoral degree (PhD)</option>
+                            <option value="112">Master's degree</option>
+                            <option value="98">Two or more post-secondary credentials</option>
+                            <option value="90">Bachelor's degree</option>
+                            <option value="30">High school diploma</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="language">First Official Language (CLB):</label>
+                        <select id="language">
+                            <option value="0">Select language level</option>
+                            <option value="128">CLB 10 or higher</option>
+                            <option value="116">CLB 9</option>
+                            <option value="102">CLB 8</option>
+                            <option value="88">CLB 7</option>
+                            <option value="0">Below CLB 7</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Canadian Work Experience (years):</label>
+                        <select id="experience">
+                            <option value="0">None</option>
+                            <option value="40">1 year</option>
+                            <option value="53">2 years</option>
+                            <option value="64">3 years</option>
+                            <option value="70">4 years</option>
+                            <option value="80">5+ years</option>
+                        </select>
+                    </div>
+                    
+                    <button onclick="calculateCRS()" class="btn btn-primary">Calculate CRS Score</button>
+                    
+                    <div id="crsResult" class="result-box" style="display: none;">
+                        <h3>Your Estimated CRS Score:</h3>
+                        <div class="score-display" id="scoreDisplay">0</div>
+                        <p id="scoreMessage"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Processing Time Estimator -->
+            <div class="tool-card">
+                <h2>⏱️ Processing Time Estimator</h2>
+                <p>Get an estimate of processing times for different immigration programs</p>
+                
+                <div class="form-group">
+                    <label for="program">Immigration Program:</label>
+                    <select id="program" onchange="showProcessingTime()">
+                        <option value="">Select a program</option>
+                        <option value="express">Express Entry</option>
+                        <option value="pnp">Provincial Nominee Program</option>
+                        <option value="family">Family Sponsorship</option>
+                        <option value="study">Study Permit</option>
+                        <option value="work">Work Permit</option>
+                    </select>
+                </div>
+                
+                <div id="processingResult" class="result-box" style="display: none;">
+                    <h3>Estimated Processing Time:</h3>
+                    <p id="processingTime"></p>
+                </div>
+            </div>
+
+            <!-- Eligibility Quick Check -->
+            <div class="tool-card">
+                <h2>✅ Express Entry Eligibility Check</h2>
+                <p>Quick assessment of your eligibility for Express Entry programs</p>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="check1"> I have at least 1 year of skilled work experience
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="check2"> I meet the language requirements (CLB 7 or higher)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="check3"> I have completed post-secondary education
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="check4"> I have sufficient funds to settle in Canada
+                    </label>
+                </div>
+                
+                <button onclick="checkEligibility()" class="btn btn-primary">Check Eligibility</button>
+                
+                <div id="eligibilityResult" class="result-box" style="display: none;">
+                    <p id="eligibilityMessage"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Need Professional Guidance?</h2>
+            <p>Our experts are here to help you with personalized advice</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CanAQuest Consulting. All rights reserved.</p>
+            <p>Professional immigration consulting services</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
