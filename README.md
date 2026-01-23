@@ -1,4 +1,4 @@
-# CanAQuest Consulting - Immigration Website
+# CanaQuest Consulting - Immigration Website
 
 A comprehensive immigration consulting website offering professional services, interactive tools, and educational resources for individuals seeking to immigrate to Canada.
 
@@ -102,15 +102,15 @@ The website is fully responsive and optimized for:
 
 ## 📧 Contact Information
 
-For inquiries about immigration services, please use the contact form on the website or reach out directly to CanAQuest Consulting.
+For inquiries about immigration services, please use the contact form on the website or reach out directly to CanaQuest Consulting.
 
 ## 📄 License
 
-© 2026 CanAQuest Consulting. All rights reserved.
+© 2026 CanaQuest Consulting. All rights reserved.
 
 ## 🤝 Contributing
 
-This is a private project for CanAQuest Consulting. For any suggestions or issues, please contact the development team.
+This is a private project for CanaQuest Consulting. For any suggestions or issues, please contact the development team.
 
 ---
 
