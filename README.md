@@ -35,15 +35,29 @@ A comprehensive immigration consulting website offering professional services, i
 
 ## 🎨 Technologies Used
 
+### Frontend
 - HTML5
 - CSS3 (Custom styling with CSS Grid and Flexbox)
 - JavaScript (Vanilla JS for interactive features)
 - Responsive Design
 - Modern UI/UX principles
 
+### Backend
+- Node.js
+- Express.js (Web framework)
+- Nodemailer (Email sending)
+- CORS (Cross-origin resource sharing)
+- dotenv (Environment variables)
+
 ## 🚀 Getting Started
 
-### View the Website Locally
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- Email account (Gmail recommended)
+
+### Frontend Setup
 
 1. Clone this repository:
 ```bash
@@ -58,6 +72,57 @@ cd immigration-website
 3. Open `index.html` in your web browser:
    - Double-click the `index.html` file, or
    - Right-click and select "Open with" your preferred browser
+
+### Backend Setup (for email functionality)
+
+1. Navigate to the backend directory:
+```bash
+cd backend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file based on `.env.example`:
+```bash
+cp .env.example .env
+```
+
+4. Configure your email settings in `.env`:
+```
+EMAIL_SERVICE=gmail
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASSWORD=your-app-specific-password
+ADMIN_EMAIL=admin@canaquestconsulting.com
+```
+
+**For Gmail users:**
+- Enable 2-factor authentication on your Gmail account
+- Generate an App Password at: https://myaccount.google.com/apppasswords
+- Use the App Password (not your regular password) in EMAIL_PASSWORD
+
+5. Start the backend server:
+```bash
+npm start
+```
+
+Or for development with auto-restart:
+```bash
+npm run dev
+```
+
+The server will run on `http://localhost:3000`
+
+### Testing the Contact Form
+
+1. Make sure the backend server is running
+2. Open the website and navigate to the Contact page
+3. Fill out and submit the form
+4. You should receive:
+   - An email notification at the admin email
+   - A confirmation email sent to the user
 
 ### Deploy to Production
 

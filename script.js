@@ -94,25 +94,62 @@ function checkEligibility() {
 // Contact Form Handler
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const formMessage = document.getElementById('formMessage');
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
+        const submitButton = contactForm.querySelector('button[type="submit"]');
         
-        // Simulate form submission
-        formMessage.textContent = `Thank you, ${name}! We've received your message and will contact you at ${email} shortly.`;
-        formMessage.className = 'form-message success';
-        formMessage.style.display = 'block';
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
         
-        // Reset form
-        contactForm.reset();
+        // Disable submit button
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
         
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
+        try {
+            // Send to backend
+            const response = await fetch('http://localhost:3000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                formMessage.textContent = result.message;
+                formMessage.className = 'form-message success';
+                formMessage.style.display = 'block';
+                contactForm.reset();
+            } else {
+                formMessage.textContent = result.message || 'Failed to send message. Please try again.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            formMessage.textContent = 'Unable to connect to server. Please try again later or contact us directly.';
+            formMessage.className = 'form-message error';
+            formMessage.style.display = 'block';
+        } finally {
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
     });
 }
 
