@@ -59,7 +59,8 @@ app.post('/api/contact', async (req, res) => {
     try {
         // Email to admin
         const adminMailOptions = {
-            from: process.env.EMAIL_USER,
+            from: `"CanaQuest Consulting" <${process.env.EMAIL_USER}>`,
+            replyTo: email, // Reply goes to the person who submitted the form
             to: process.env.ADMIN_EMAIL || process.env.EMAIL_USER,
             subject: `New Contact Form Submission: ${subject || 'No Subject'}`,
             html: `
@@ -83,7 +84,7 @@ app.post('/api/contact', async (req, res) => {
 
         // Confirmation email to user
         const userMailOptions = {
-            from: process.env.EMAIL_USER,
+            from: `"CanaQuest Consulting" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: 'Thank you for contacting CanaQuest Consulting',
             html: `
