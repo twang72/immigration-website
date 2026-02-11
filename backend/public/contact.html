@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CanaQuest Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>CanaQuest Consulting</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" data-en="Home" data-zh="首页">Home</a></li>
+                <li><a href="tools.html" data-en="Immigration Tools" data-zh="移民工具">Immigration Tools</a></li>
+                <li><a href="medical-education.html" data-en="Medical Education" data-zh="医学教育">Medical Education</a></li>
+                <li><a href="links.html" data-en="Useful Links" data-zh="实用链接">Useful Links</a></li>
+                <li><a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a></li>
+                <li><a href="contact.html" class="active" data-en="Contact" data-zh="联系我们">Contact</a></li>
+                <li><button id="langToggle" class="lang-toggle" aria-label="Switch to Chinese">中文</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-en="Contact Us" data-zh="联系我们">Contact Us</h1>
+            <p data-en="Get in touch with our immigration experts" data-zh="与我们的移民专家取得联系">Get in touch with our immigration experts</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 data-en="Get In Touch" data-zh="联系方式">Get In Touch</h2>
+                    <p data-en="Have questions about Canadian immigration? We're here to help. Contact us today for a consultation." data-zh="对加拿大移民有疑问？我们随时为您提供帮助。立即联系我们进行咨询。">Have questions about Canadian immigration? We're here to help. Contact us today for a consultation.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3 data-en="Email" data-zh="电子邮件">Email</h3>
+                                <p>info@canaquestconsulting.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3 data-en="Address" data-zh="地址">Address</h3>
+                                <p>329 Howe St</p>
+                                <p>PMB 2145</p>
+                                <p>Vancouver, BC V6C 3N2</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <h3 data-en="Business Hours" data-zh="营业时间">Business Hours</h3>
+                                <p data-en="Monday - Friday: 9:00 AM - 6:00 PM PST" data-zh="周一至周五：上午 9:00 - 下午 6:00（太平洋时间）">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                                <p data-en="Saturday: 10:00 AM - 2:00 PM PST" data-zh="周六：上午 10:00 - 下午 2:00（太平洋时间）">Saturday: 10:00 AM - 2:00 PM PST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2 data-en="Send Us a Message" data-zh="给我们留言">Send Us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-en="Full Name *" data-zh="姓名 *">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address *" data-zh="电子邮箱 *">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" data-en="Phone Number" data-zh="电话号码">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-en="Subject *" data-zh="主题 *">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" data-en="Select a subject" data-zh="选择主题">Select a subject</option>
+                                <option value="express-entry" data-en="Express Entry" data-zh="快速通道">Express Entry</option>
+                                <option value="pnp" data-en="Provincial Nominee Program" data-zh="省提名计划">Provincial Nominee Program</option>
+                                <option value="family" data-en="Family Sponsorship" data-zh="家庭担保">Family Sponsorship</option>
+                                <option value="study" data-en="Study Permit" data-zh="学习许可">Study Permit</option>
+                                <option value="work" data-en="Work Permit" data-zh="工作许可">Work Permit</option>
+                                <option value="other" data-en="Other Inquiry" data-zh="其他咨询">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-en="Message *" data-zh="留言 *">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" data-en="Send Message" data-zh="发送消息">Send Message</button>
+                        
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-en="&copy; 2026 CanaQuest Consulting. All rights reserved." data-zh="&copy; 2026 CanaQuest 咨询。保留所有权利。">&copy; 2026 CanaQuest Consulting. All rights reserved.</p>
+            <p data-en="Professional immigration consulting services" data-zh="专业移民咨询服务">Professional immigration consulting services</p>
+        </div>
+    </footer>
+
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
