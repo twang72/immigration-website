@@ -13,19 +13,20 @@
                 <h2>CanaQuest Consulting</h2>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tools.html" class="active">Immigration Tools</a></li>
-                <li><a href="medical-education.html">Medical Education</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-en="Home" data-zh="首页">Home</a></li>
+                <li><a href="tools.html" class="active" data-en="Immigration Tools" data-zh="移民工具">Immigration Tools</a></li>
+                <li><a href="medical-education.html" data-en="Medical Education" data-zh="医学教育">Medical Education</a></li>
+                <li><a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a></li>
+                <li><a href="contact.html" data-en="Contact" data-zh="联系我们">Contact</a></li>
+                <li><button id="langToggle" class="lang-toggle" aria-label="Switch to Chinese">中文</button></li>
             </ul>
         </div>
     </nav>
 
     <section class="page-header">
         <div class="container">
-            <h1>Immigration Tools & Calculators</h1>
-            <p>Free tools to help you assess your immigration eligibility</p>
+            <h1 data-en="Immigration Tools &amp; Calculators" data-zh="移民工具和计算器">Immigration Tools & Calculators</h1>
+            <p data-en="Free tools to help you assess your immigration eligibility" data-zh="免费工具帮助您评估移民资格">Free tools to help you assess your immigration eligibility</p>
         </div>
     </section>
 
@@ -33,55 +34,55 @@
         <div class="container">
             <!-- CRS Calculator -->
             <div class="tool-card">
-                <h2>🎯 Express Entry CRS Calculator</h2>
-                <p>Calculate your Comprehensive Ranking System (CRS) score for Express Entry</p>
+                <h2 data-en="🎯 Express Entry CRS Calculator" data-zh="🎯 快速通道 CRS 计算器">🎯 Express Entry CRS Calculator</h2>
+                <p data-en="Calculate your Comprehensive Ranking System (CRS) score for Express Entry" data-zh="计算您的快速通道综合排名系统 (CRS) 分数">Calculate your Comprehensive Ranking System (CRS) score for Express Entry</p>
                 
                 <div class="calculator">
                     <div class="form-group">
-                        <label for="age">Age:</label>
-                        <input type="number" id="age" min="18" max="100" placeholder="Enter your age">
+                        <label for="age" data-en="Age:" data-zh="年龄：">Age:</label>
+                        <input type="number" id="age" min="18" max="100" data-en="Enter your age" data-zh="请输入您的年龄" placeholder="Enter your age">
                     </div>
                     
                     <div class="form-group">
-                        <label for="education">Level of Education:</label>
+                        <label for="education" data-en="Level of Education:" data-zh="教育水平：">Level of Education:</label>
                         <select id="education">
-                            <option value="0">Select education level</option>
-                            <option value="120">Doctoral degree (PhD)</option>
-                            <option value="112">Master's degree</option>
-                            <option value="98">Two or more post-secondary credentials</option>
-                            <option value="90">Bachelor's degree</option>
-                            <option value="30">High school diploma</option>
+                            <option value="0" data-en="Select education level" data-zh="选择教育水平">Select education level</option>
+                            <option value="120" data-en="Doctoral degree (PhD)" data-zh="博士学位">Doctoral degree (PhD)</option>
+                            <option value="112" data-en="Master's degree" data-zh="硕士学位">Master's degree</option>
+                            <option value="98" data-en="Two or more post-secondary credentials" data-zh="两个或以上高等教育文凭">Two or more post-secondary credentials</option>
+                            <option value="90" data-en="Bachelor's degree" data-zh="学士学位">Bachelor's degree</option>
+                            <option value="30" data-en="High school diploma" data-zh="高中毕业证">High school diploma</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="language">First Official Language (CLB):</label>
+                        <label for="language" data-en="First Official Language (CLB):" data-zh="第一官方语言 (CLB)：">First Official Language (CLB):</label>
                         <select id="language">
-                            <option value="0">Select language level</option>
-                            <option value="128">CLB 10 or higher</option>
-                            <option value="116">CLB 9</option>
-                            <option value="102">CLB 8</option>
-                            <option value="88">CLB 7</option>
-                            <option value="0">Below CLB 7</option>
+                            <option value="0" data-en="Select language level" data-zh="选择语言水平">Select language level</option>
+                            <option value="128" data-en="CLB 10 or higher" data-zh="CLB 10 或更高">CLB 10 or higher</option>
+                            <option value="116" data-en="CLB 9" data-zh="CLB 9">CLB 9</option>
+                            <option value="102" data-en="CLB 8" data-zh="CLB 8">CLB 8</option>
+                            <option value="88" data-en="CLB 7" data-zh="CLB 7">CLB 7</option>
+                            <option value="0" data-en="Below CLB 7" data-zh="低于 CLB 7">Below CLB 7</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="experience">Canadian Work Experience (years):</label>
+                        <label for="experience" data-en="Canadian Work Experience (years):" data-zh="加拿大工作经验（年）：">Canadian Work Experience (years):</label>
                         <select id="experience">
-                            <option value="0">None</option>
-                            <option value="40">1 year</option>
-                            <option value="53">2 years</option>
-                            <option value="64">3 years</option>
-                            <option value="70">4 years</option>
-                            <option value="80">5+ years</option>
+                            <option value="0" data-en="None" data-zh="无">None</option>
+                            <option value="40" data-en="1 year" data-zh="1 年">1 year</option>
+                            <option value="53" data-en="2 years" data-zh="2 年">2 years</option>
+                            <option value="64" data-en="3 years" data-zh="3 年">3 years</option>
+                            <option value="70" data-en="4 years" data-zh="4 年">4 years</option>
+                            <option value="80" data-en="5+ years" data-zh="5 年以上">5+ years</option>
                         </select>
                     </div>
                     
-                    <button onclick="calculateCRS()" class="btn btn-primary">Calculate CRS Score</button>
+                    <button onclick="calculateCRS()" class="btn btn-primary" data-en="Calculate CRS Score" data-zh="计算 CRS 分数">Calculate CRS Score</button>
                     
                     <div id="crsResult" class="result-box" style="display: none;">
-                        <h3>Your Estimated CRS Score:</h3>
+                        <h3 data-en="Your Estimated CRS Score:" data-zh="您的预估 CRS 分数：">Your Estimated CRS Score:</h3>
                         <div class="score-display" id="scoreDisplay">0</div>
                         <p id="scoreMessage"></p>
                     </div>
@@ -90,54 +91,54 @@
 
             <!-- Processing Time Estimator -->
             <div class="tool-card">
-                <h2>⏱️ Processing Time Estimator</h2>
-                <p>Get an estimate of processing times for different immigration programs</p>
+                <h2 data-en="⏱️ Processing Time Estimator" data-zh="⏱️ 处理时间估算器">⏱️ Processing Time Estimator</h2>
+                <p data-en="Get an estimate of processing times for different immigration programs" data-zh="获取不同移民项目的处理时间估算">Get an estimate of processing times for different immigration programs</p>
                 
                 <div class="form-group">
-                    <label for="program">Immigration Program:</label>
+                    <label for="program" data-en="Immigration Program:" data-zh="移民项目：">Immigration Program:</label>
                     <select id="program" onchange="showProcessingTime()">
-                        <option value="">Select a program</option>
-                        <option value="express">Express Entry</option>
-                        <option value="pnp">Provincial Nominee Program</option>
-                        <option value="family">Family Sponsorship</option>
-                        <option value="study">Study Permit</option>
-                        <option value="work">Work Permit</option>
+                        <option value="" data-en="Select a program" data-zh="选择一个项目">Select a program</option>
+                        <option value="express" data-en="Express Entry" data-zh="快速通道">Express Entry</option>
+                        <option value="pnp" data-en="Provincial Nominee Program" data-zh="省提名计划">Provincial Nominee Program</option>
+                        <option value="family" data-en="Family Sponsorship" data-zh="家庭担保">Family Sponsorship</option>
+                        <option value="study" data-en="Study Permit" data-zh="学习许可">Study Permit</option>
+                        <option value="work" data-en="Work Permit" data-zh="工作许可">Work Permit</option>
                     </select>
                 </div>
                 
                 <div id="processingResult" class="result-box" style="display: none;">
-                    <h3>Estimated Processing Time:</h3>
+                    <h3 data-en="Estimated Processing Time:" data-zh="预计处理时间：">Estimated Processing Time:</h3>
                     <p id="processingTime"></p>
                 </div>
             </div>
 
             <!-- Eligibility Quick Check -->
             <div class="tool-card">
-                <h2>✅ Express Entry Eligibility Check</h2>
-                <p>Quick assessment of your eligibility for Express Entry programs</p>
+                <h2 data-en="✅ Express Entry Eligibility Check" data-zh="✅ 快速通道资格检查">✅ Express Entry Eligibility Check</h2>
+                <p data-en="Quick assessment of your eligibility for Express Entry programs" data-zh="快速评估您的快速通道项目资格">Quick assessment of your eligibility for Express Entry programs</p>
                 
                 <div class="form-group">
-                    <label>
+                    <label data-en="<input type='checkbox' id='check1'> I have at least 1 year of skilled work experience" data-zh="<input type='checkbox' id='check1'> 我有至少1年的技术工作经验">
                         <input type="checkbox" id="check1"> I have at least 1 year of skilled work experience
                     </label>
                 </div>
                 <div class="form-group">
-                    <label>
+                    <label data-en="<input type='checkbox' id='check2'> I meet the language requirements (CLB 7 or higher)" data-zh="<input type='checkbox' id='check2'> 我满足语言要求（CLB 7 或更高）">
                         <input type="checkbox" id="check2"> I meet the language requirements (CLB 7 or higher)
                     </label>
                 </div>
                 <div class="form-group">
-                    <label>
+                    <label data-en="<input type='checkbox' id='check3'> I have completed post-secondary education" data-zh="<input type='checkbox' id='check3'> 我已完成高等教育">
                         <input type="checkbox" id="check3"> I have completed post-secondary education
                     </label>
                 </div>
                 <div class="form-group">
-                    <label>
+                    <label data-en="<input type='checkbox' id='check4'> I have sufficient funds to settle in Canada" data-zh="<input type='checkbox' id='check4'> 我有足够的资金在加拿大定居">
                         <input type="checkbox" id="check4"> I have sufficient funds to settle in Canada
                     </label>
                 </div>
                 
-                <button onclick="checkEligibility()" class="btn btn-primary">Check Eligibility</button>
+                <button onclick="checkEligibility()" class="btn btn-primary" data-en="Check Eligibility" data-zh="检查资格">Check Eligibility</button>
                 
                 <div id="eligibilityResult" class="result-box" style="display: none;">
                     <p id="eligibilityMessage"></p>
@@ -148,19 +149,20 @@
 
     <section class="cta">
         <div class="container">
-            <h2>Need Professional Guidance?</h2>
-            <p>Our experts are here to help you with personalized advice</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            <h2 data-en="Need Professional Guidance?" data-zh="需要专业指导？">Need Professional Guidance?</h2>
+            <p data-en="Our experts are here to help you with personalized advice" data-zh="我们的专家随时为您提供个性化建议">Our experts are here to help you with personalized advice</p>
+            <a href="contact.html" class="btn btn-primary" data-en="Contact Us" data-zh="联系我们">Contact Us</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 CanaQuest Consulting. All rights reserved.</p>
-            <p>Professional immigration consulting services</p>
+            <p data-en="&copy; 2026 CanaQuest Consulting. All rights reserved." data-zh="&copy; 2026 CanaQuest 咨询。保留所有权利。">&copy; 2026 CanaQuest Consulting. All rights reserved.</p>
+            <p data-en="Professional immigration consulting services" data-zh="专业移民咨询服务">Professional immigration consulting services</p>
         </div>
     </footer>
 
+    <script src="lang.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
