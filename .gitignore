@@ -3,4 +3,3 @@ backend/node_modules/
 backend/.env
 *.log
 .DS_Store
-package-lock.json
