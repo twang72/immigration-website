@@ -38,4 +38,4 @@ jobs:
           cd frontend/out
           zip -r ../../deploy.zip .
           cd ../..
-          az webapp deploy --name canaquest-consulting --resource-group canaquest-rg --src-path deploy.zip --type zip --async false
+          az webapp deploy --name canaquest-consulting --resource-group canaquest-rg --src-path deploy.zip --type zip --clean true
