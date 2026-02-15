@@ -28,9 +28,23 @@ jobs:
         working-directory: frontend
         run: npx next build
 
+      - name: Create deployment package
+        run: |
+          cd frontend
+          # Create a standalone deployment with node_modules and .next
+          mkdir -p deploy
+          cp -r .next deploy/
+          cp -r public deploy/ 2>/dev/null || true
+          cp package.json deploy/
+          cp package-lock.json deploy/
+          cp next.config.ts deploy/
+          cd deploy
+          npm ci --omit=dev
+          zip -r ../../deploy.zip .
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: canaquest-consulting
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: frontend
+          package: deploy.zip
