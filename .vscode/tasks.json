@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Dev Server",
+			"type": "shell",
+			"command": "cd \"C:\\Users\\Thomas Wang\\Documents\\Vibe Coding Projects\\vibe-coding-website\" && npx next dev",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Vibe Coding Dev Server",
+			"type": "shell",
+			"command": "Set-Location 'C:\\Users\\Thomas Wang\\Documents\\Vibe Coding Projects\\vibe-coding-website'; npx next dev",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

@@ -14,10 +14,16 @@ export default function PageHeader({ titleEn, titleZh, subtitleEn, subtitleZh }:
   const { t } = useLang();
 
   return (
-    <section className="bg-gradient-to-br from-red-700 to-blue-600 px-4 py-16 text-center text-white sm:py-20">
-      <div className="mx-auto max-w-4xl">
-        <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">{t(titleEn, titleZh)}</h1>
-        <p className="mt-4 text-lg opacity-90 sm:text-xl">{t(subtitleEn, subtitleZh)}</p>
+    <section className="relative overflow-hidden bg-gray-950 px-6 pt-32 pb-20 text-white sm:pt-40 sm:pb-24 lg:px-8">
+      {/* Subtle gradient orbs */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-red-700/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-20 right-0 h-[300px] w-[400px] rounded-full bg-blue-600/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-4xl text-center">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+          {t(titleEn, titleZh)}
+        </h1>
+        <p className="mt-4 text-lg text-gray-400 sm:text-xl">{t(subtitleEn, subtitleZh)}</p>
       </div>
     </section>
   );
@@ -37,13 +43,18 @@ export function CTASection({ titleEn, titleZh, subtitleEn, subtitleZh, buttonEn,
   const { t } = useLang();
 
   return (
-    <section className="bg-blue-600 px-4 py-16 text-center text-white">
-      <div className="mx-auto max-w-3xl">
-        <h2 className="text-2xl font-bold sm:text-3xl">{t(titleEn, titleZh)}</h2>
-        <p className="mt-3 text-lg opacity-90">{t(subtitleEn, subtitleZh)}</p>
+    <section className="relative overflow-hidden bg-gray-950 px-6 py-24 text-center text-white">
+      <div className="pointer-events-none absolute -top-20 left-1/4 h-[400px] w-[600px] rounded-full bg-red-700/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-20 right-1/4 h-[300px] w-[500px] rounded-full bg-blue-600/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-2xl">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+          {t(titleEn, titleZh)}
+        </h2>
+        <p className="mt-4 text-lg text-gray-400">{t(subtitleEn, subtitleZh)}</p>
         <Link
           href={href}
-          className="mt-6 inline-block rounded-lg bg-white px-8 py-3 font-semibold text-red-700 shadow-lg transition-transform hover:-translate-y-0.5 hover:shadow-xl"
+          className="mt-8 inline-block rounded-lg bg-red-700 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-700/25 transition-all hover:bg-red-600 hover:shadow-xl hover:shadow-red-700/30"
         >
           {t(buttonEn, buttonZh)}
         </Link>
